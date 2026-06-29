@@ -100,6 +100,7 @@ ul {
   position: sticky;
   top: 0;
   z-index: 100;
+  background: rgba(248, 247, 244, 0.88);
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(16px) saturate(1.2);
   border-bottom: 1px solid var(--line);
@@ -396,6 +397,7 @@ ul {
   flex-direction: column;
   justify-content: flex-end;
   min-height: 160px;
+  width: 100%;
   transition: transform 0.2s, box-shadow 0.2s;
   overflow: hidden;
   position: relative;
@@ -403,6 +405,12 @@ ul {
   font: inherit;
   text-align: left;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+button.bento-card {
+  font-family: inherit;
 }
 
 a.bento-card:hover,
