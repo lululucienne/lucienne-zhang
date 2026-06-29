@@ -1004,3 +1004,231 @@ button.bento-card:hover {
     text-align: left;
   }
 }
+
+/* Refined finish */
+
+:root {
+  --radius: 12px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+section[id],
+main[id] {
+  scroll-margin-top: 86px;
+}
+
+.site-header {
+  border-bottom-color: color-mix(in srgb, var(--line) 76%, transparent);
+  box-shadow: 0 4px 24px rgba(15, 28, 46, 0.025);
+}
+
+.nav-logo,
+.theme-toggle {
+  transition: color 0.25s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-logo:hover {
+  color: var(--gold);
+}
+
+.theme-toggle:hover {
+  border-color: var(--gold);
+  transform: rotate(8deg);
+}
+
+.hero {
+  padding-top: 6.5rem;
+  padding-bottom: 5rem;
+}
+
+.hero-name {
+  text-wrap: balance;
+}
+
+.hero-tagline {
+  text-wrap: pretty;
+}
+
+.hero-socials a {
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.hero-socials a::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease;
+}
+
+.hero-socials a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn,
+.bento-btn,
+.skill-tag,
+.timeline-badge {
+  border-radius: 999px;
+}
+
+.hero-visual::before,
+.hero-visual::after {
+  border-radius: 20px;
+}
+
+.avatar-frame {
+  border-radius: 14px;
+}
+
+.bento-wrap {
+  padding-block: 4rem;
+}
+
+.bento {
+  gap: 1.15rem;
+}
+
+.bento-card {
+  border-radius: var(--radius);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+a.bento-card:hover,
+button.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--gold) 45%, var(--line));
+}
+
+.bento-link {
+  transition: transform 0.2s ease;
+}
+
+.bento-card:hover .bento-link {
+  transform: translateX(4px);
+}
+
+.bento-photos {
+  box-shadow: inset 0 -80px 100px rgba(8, 17, 29, 0.12);
+}
+
+.section {
+  padding-block: 6.5rem;
+}
+
+.section-title {
+  letter-spacing: -0.015em;
+}
+
+.timeline,
+.skills-grid,
+.contact-links {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-card {
+  transition: background 0.25s ease;
+}
+
+.timeline-card:not(.timeline-card--current):hover {
+  background: color-mix(in srgb, var(--surface) 88%, var(--bg-alt));
+}
+
+.work-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-3px);
+}
+
+.contact-card {
+  transition: background 0.2s ease;
+}
+
+.contact-card .contact-value {
+  transition: color 0.2s ease;
+}
+
+.contact-card:hover .contact-value {
+  color: var(--gold);
+}
+
+.photo-item {
+  border-radius: var(--radius);
+}
+
+.photo-item:hover img {
+  transform: scale(1.045);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero {
+    padding-bottom: 4rem;
+  }
+
+  .section {
+    padding-block: 4.5rem;
+  }
+
+  .timeline-card {
+    padding: 1.6rem 1.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-visual {
+    padding: 0.9rem;
+  }
+
+  .bento-card {
+    padding: 1.3rem;
+  }
+
+  .contact-value {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

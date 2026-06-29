@@ -9,13 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
       <a class="nav-logo" href="#top">Lucienne Zhang</a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         <li><a class="nav-link active" href="#top">Home</a></li>
         <li><a class="nav-link" href="#about">About</a></li>
         <li><a class="nav-link" href="#experience-detail">Experience</a></li>
@@ -25,11 +25,11 @@
         <li><a class="nav-link" href="#contact-panel">Contact</a></li>
       </ul>
       <div class="nav-actions">
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch color theme">
           <span class="theme-icon theme-icon--sun" aria-hidden="true">☀</span>
           <span class="theme-icon theme-icon--moon" aria-hidden="true">☾</span>
         </button>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -55,7 +55,7 @@
         </div>
         <div class="hero-socials">
           <a href="https://www.linkedin.com/in/yuxin-zhang-lucinne/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="mailto:yuxingood66@gmail.com">Email</a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=yuxingood66%40gmail.com">Email</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -94,12 +94,12 @@
           <span class="bento-link">View projects →</span>
         </a>
 
-        <button class="bento-card bento-location" type="button" data-map="Waterloo, ON, Canada">
+        <a class="bento-card bento-location" href="https://www.google.com/maps/search/?api=1&amp;query=Waterloo%2C%20ON%2C%20Canada" target="_blank" rel="noopener noreferrer" aria-label="Open Waterloo, Ontario in Google Maps">
           <p class="bento-eyebrow">Current Base</p>
           <h2 class="bento-title">Location</h2>
           <p class="bento-value">Waterloo, ON</p>
           <span class="bento-btn bento-btn--ghost">Open Map</span>
-        </button>
+        </a>
 
         <div class="bento-card bento-education">
           <p class="bento-eyebrow">Current Study</p>
@@ -296,7 +296,7 @@
         <h2 class="section-title">Contact</h2>
         <p class="contact-intro">Open to co-op opportunities, collaborations, and conversations about actuarial science and analytics.</p>
         <div class="contact-links">
-          <a class="contact-card" href="mailto:yuxingood66@gmail.com">
+          <a class="contact-card" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=yuxingood66%40gmail.com">
             <span class="contact-icon">✉</span>
             <span class="contact-label">Email</span>
             <span class="contact-value">yuxingood66@gmail.com</span>
@@ -322,6 +322,6 @@
     </div>
   </footer>
 
-  <script src="main.js?v=2"></script>
+  <script src="main.js?v=3"></script>
 </body>
 </html>

@@ -1,25 +1,39 @@
 const toggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 const themeToggle = document.querySelector(".theme-toggle");
-const mapButton = document.querySelector(".card-location");
 
 if (toggle && navLinks) {
   toggle.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("open");
     toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 
   navLinks.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open menu");
     });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navLinks.classList.contains("open")) {
+      navLinks.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open menu");
+      toggle.focus();
+    }
   });
 }
 
 const storedTheme = localStorage.getItem("theme");
 if (storedTheme) {
   document.documentElement.setAttribute("data-theme", storedTheme);
+}
+
+if (themeToggle && document.documentElement.getAttribute("data-theme") === "dark") {
+  themeToggle.setAttribute("aria-label", "Switch to light mode");
 }
 
 if (themeToggle) {
@@ -35,19 +49,10 @@ if (themeToggle) {
   });
 }
 
-if (mapButton) {
-  mapButton.addEventListener("click", () => {
-    const query = mapButton.dataset.map || "Waterloo, ON, Canada";
-    window.open(
-      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`,
-      "_blank",
-      "noopener,noreferrer"
-    );
-  });
-}
-
-const sections = document.querySelectorAll("[id]");
 const navLinkEls = document.querySelectorAll(".nav-link");
+const sections = [...navLinkEls]
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter((section, index, all) => section && all.indexOf(section) === index);
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -63,6 +68,4 @@ const observer = new IntersectionObserver(
   { rootMargin: "-40% 0px -50% 0px" }
 );
 
-sections.forEach((section) => {
-  if (section.id) observer.observe(section);
-});
+sections.forEach((section) => observer.observe(section));
