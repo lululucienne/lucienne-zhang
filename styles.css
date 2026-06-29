@@ -246,7 +246,8 @@ ul {
 
 .hero-visual {
   position: relative;
-  padding: 1.25rem;
+  padding: 1.5rem;
+  flex-shrink: 0;
 }
 
 .hero-visual::before {
@@ -271,7 +272,7 @@ ul {
 }
 
 .avatar-frame {
-  width: 260px;
+  width: 400px;
   aspect-ratio: 768 / 940;
   overflow: hidden;
   background: #eceae6;
@@ -746,7 +747,7 @@ ul {
   }
 
   .avatar-frame {
-    width: min(220px, 72vw);
+    width: min(320px, 84vw);
   }
 
   .about-grid {
