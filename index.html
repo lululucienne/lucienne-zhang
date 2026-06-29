@@ -15,22 +15,30 @@
     <nav class="nav">
       <a class="nav-logo" href="#top">Lucienne Zhang</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="nav-link active" href="#top">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#experience-detail">Experience</a></li>
+        <li><a class="nav-link" href="#projects-detail">Projects</a></li>
+        <li><a class="nav-link" href="#photos">Photos</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#contact-panel">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <span class="theme-icon theme-icon--sun" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-icon--moon" aria-hidden="true">☾</span>
+        </button>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero container" id="about">
       <div class="hero-content">
         <p class="hero-greeting">Hello, I'm</p>
         <h1 class="hero-name">Lucienne Zhang</h1>
@@ -38,10 +46,15 @@
         <p class="hero-tagline">
           Quantitative thinker with experience across actuarial studies, fintech,
           and business analytics — focused on risk, insight, and measurable impact.
+          Passed <strong>SOA Exams P &amp; FM</strong>.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Get in Touch</a>
-          <a class="btn btn-secondary" href="#experience">View Experience</a>
+          <a class="btn btn-primary" href="#contact-panel">Get in Touch</a>
+          <a class="btn btn-secondary" href="#experience-detail">View Experience</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/yuxin-zhang-lucinne/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:yuxingood66@gmail.com">Email</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -51,41 +64,65 @@
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Actuarial science student building a foundation in risk, finance, and data-driven decision-making.</p>
-        <div class="about-grid">
-          <p class="about-text">
-            I'm an Actuarial Science student at the University of Waterloo. I combine quantitative
-            thinking with hands-on business experience — from fintech and marketing analytics to
-            accounting and investment research. I have passed SOA Exams P and FM and enjoy building
-            models, dashboards, and strategies that help teams make sharper decisions and deliver
-            measurable results.
-          </p>
-          <ul class="about-highlights">
-            <li>
-              <span class="highlight-label">Location</span>
-              <span class="highlight-value">Waterloo, Canada</span>
-            </li>
-            <li>
-              <span class="highlight-label">Education</span>
-              <span class="highlight-value">Actuarial Science, University of Waterloo</span>
-            </li>
-            <li>
-              <span class="highlight-label">Certifications</span>
-              <span class="highlight-value">SOA Exam P &amp; FM — Passed</span>
-            </li>
-            <li>
-              <span class="highlight-label">Focus Areas</span>
-              <span class="highlight-value">Actuarial Science, Risk Analysis, Business Analytics</span>
-            </li>
-          </ul>
+    <section class="bento-wrap">
+      <div class="bento container">
+        <a class="bento-card bento-photos" href="#photos" id="photos-card">
+          <p class="bento-eyebrow">Creative Work</p>
+          <h2 class="bento-title">Photos</h2>
+          <p class="bento-desc">Life, travel, and everyday moments.</p>
+          <span class="bento-link">View photos →</span>
+        </a>
+
+        <a class="bento-card bento-resume" href="#experience-detail">
+          <p class="bento-eyebrow">My Resume</p>
+          <h2 class="bento-title">Lucienne Zhang</h2>
+          <span class="bento-btn">View experience</span>
+        </a>
+
+        <a class="bento-card bento-feature bento-experience" href="#experience-detail" id="experience">
+          <p class="bento-eyebrow">Professional Work</p>
+          <h2 class="bento-title">Experience</h2>
+          <p class="bento-desc">Fintech, marketing analytics, academic support, and finance.</p>
+          <span class="bento-link">View roles →</span>
+        </a>
+
+        <a class="bento-card bento-feature bento-projects" href="#projects-detail" id="projects">
+          <p class="bento-eyebrow">Featured Work</p>
+          <h2 class="bento-title">Projects</h2>
+          <p class="bento-desc">Food security analysis, stock screening, and Power BI dashboards.</p>
+          <span class="bento-link">View projects →</span>
+        </a>
+
+        <button class="bento-card bento-location" type="button" data-map="Waterloo, ON, Canada">
+          <p class="bento-eyebrow">Current Base</p>
+          <h2 class="bento-title">Location</h2>
+          <p class="bento-value">Waterloo, ON</p>
+          <span class="bento-btn bento-btn--ghost">Open Map</span>
+        </button>
+
+        <div class="bento-card bento-education">
+          <p class="bento-eyebrow">Current Study</p>
+          <h2 class="bento-title">Education</h2>
+          <p class="bento-value">University of Waterloo · Actuarial Science</p>
         </div>
+
+        <a class="bento-card bento-skills-link" href="#skills">
+          <p class="bento-eyebrow">Toolbox</p>
+          <h2 class="bento-title">Skills</h2>
+          <p class="bento-desc">Python, SQL, Excel, Power BI, SAS, SOA P &amp; FM.</p>
+          <span class="bento-link">View skills →</span>
+        </a>
+
+        <a class="bento-card bento-contact-link" href="#contact-panel">
+          <p class="bento-eyebrow">Get in Touch</p>
+          <h2 class="bento-title">Contact</h2>
+          <p class="bento-desc">Open to co-op and collaborations in actuarial science.</p>
+          <span class="bento-link">Say hello →</span>
+        </a>
       </div>
     </section>
 
-    <section id="experience" class="section section-alt">
+    <section class="section" id="experience-detail">
       <div class="container">
         <h2 class="section-title">Work Experience</h2>
         <p class="section-subtitle">Professional experience across education, fintech, marketing analytics, and finance.</p>
@@ -103,11 +140,10 @@
               </div>
             </div>
             <ul>
-              <li>Deliver 35 hours of weekly academic support across Accounting, Finance, Business Mathematics, Economics, and Statistics, assisting 20–25 students weekly through drop-in and one-on-one tutoring.</li>
-              <li>Conduct 20+ individualized academic support sessions per week, helping students strengthen quantitative reasoning, financial problem-solving, and exam preparation strategies.</li>
-              <li>Collaborate with 12 faculty members to reinforce course materials, identify recurring learning gaps, and improve student engagement across multiple business courses.</li>
-              <li>Integrate AI-powered learning tools into tutoring support to improve study efficiency, concept comprehension, and problem-solving workflows while promoting responsible academic use.</li>
-              <li>Develop structured study frameworks and personalized learning strategies to support independent learning and improve academic confidence in business-related subjects.</li>
+              <li>Deliver 35 hours of weekly academic support across Accounting, Finance, Business Mathematics, Economics, and Statistics, assisting 20–25 students weekly.</li>
+              <li>Conduct 20+ individualized academic support sessions per week on quantitative reasoning and exam preparation.</li>
+              <li>Collaborate with 12 faculty members to reinforce course materials and improve student engagement.</li>
+              <li>Integrate AI-powered learning tools into tutoring while promoting responsible academic use.</li>
             </ul>
           </article>
 
@@ -123,10 +159,9 @@
               </div>
             </div>
             <ul>
-              <li>Analyzed the cross-border payment competitive landscape (Flywire, CIBC, Alipay, Convera) and produced an insight report to guide business planning for a fintech provider processing $1B+ in annual tuition payments across 1,000+ institutions.</li>
-              <li>Collaborated with a 200+ member sales team to standardize customer data, built a segmentation model, and supported targeted business strategies.</li>
-              <li>Built a KPI target-setting model using location and enrollment data, driving a 40% quarter-over-quarter increase and supporting CAD $2M+ in tuition and rent payment processing.</li>
-              <li>Supported the launch of a rental brokerage business, identifying high-potential regions and driving 500+ completed rental orders.</li>
+              <li>Analyzed the cross-border payment competitive landscape and produced insight reports for a fintech provider processing $1B+ annually.</li>
+              <li>Collaborated with a 200+ member sales team to standardize customer data and built a segmentation model.</li>
+              <li>Built a KPI target-setting model driving a 40% QoQ increase and supporting CAD $2M+ in payment processing.</li>
             </ul>
           </article>
 
@@ -142,10 +177,8 @@
               </div>
             </div>
             <ul>
-              <li>Planned and published multi-platform content (X, LinkedIn, Facebook, Instagram) for an AI skills bootcamp, tracking performance via HubSpot — achieving 3× views, 1.6× likes, and 10% audience growth.</li>
-              <li>Delivered insight-driven recommendations on content planning, channel allocation, and campaign strategy to improve marketing ROI and lead quality.</li>
-              <li>Built a data-informed marketing strategy combining competitor insights with channel metrics to optimize paid media and posting cadence.</li>
-              <li>Created a standardized onboarding playbook and SOPs, reducing new team member ramp-up time by 50%.</li>
+              <li>Planned multi-platform content and tracked performance via HubSpot — 3× views, 1.6× likes, 10% audience growth.</li>
+              <li>Created onboarding playbooks and SOPs, reducing ramp-up time by 50%.</li>
             </ul>
           </article>
 
@@ -161,17 +194,67 @@
               </div>
             </div>
             <ul>
-              <li>Built a data-driven raw material planning approach that cut material losses by 15%, saving $3M+ in raw material costs.</li>
-              <li>Negotiated payment terms with clients and increased upfront payment collection by 10%, improving cash flow and reducing interest expenses.</li>
-              <li>Generated monthly management reports, performed budgeting and forecasting, and validated gross margin, net profit, and cost drivers in Excel.</li>
-              <li>Prepared monthly tax documents, reconciled tax-related entries during month-end close, and ensured accurate reporting.</li>
+              <li>Cut material losses by 15%, saving $3M+ in raw material costs.</li>
+              <li>Generated monthly management reports, budgeting, forecasting, and tax reconciliation.</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section class="section section-alt" id="photos">
+      <div class="container">
+        <h2 class="section-title">Photos</h2>
+        <p class="section-subtitle">A few moments from life, travel, and time outside the classroom.</p>
+        <div class="photo-grid">
+          <figure class="photo-item"><img src="assets/photos/IMG_3118.jpg" alt="Lucienne Zhang" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_aquarium.jpg" alt="At the aquarium" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_shark.jpg" alt="Aquarium visit" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_3117.jpg" alt="Lucienne Zhang" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_3028.jpg" alt="Lucienne Zhang" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_3027.jpg" alt="Lucienne Zhang" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_2958.jpg" alt="Lucienne Zhang" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_2880.jpg" alt="With friends" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_2879.jpg" alt="With friends" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_2977.jpg" alt="Cocktails" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_9918.jpg" alt="Dessert" loading="lazy" /></figure>
+          <figure class="photo-item"><img src="assets/photos/IMG_2999.jpg" alt="Dinner" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects-detail">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Selected academic and analytical projects demonstrating research and quantitative skills.</p>
+        <div class="works-grid">
+          <article class="work-card">
+            <div class="work-thumb">01</div>
+            <div class="work-body">
+              <h3>Data-Driven Student Food Security Analysis</h3>
+              <p class="work-period">Apr 2025 – Jul 2025</p>
+              <ul>
+                <li>Analyzed Statistics Canada data and visualized insights in interactive Power BI dashboards.</li>
+                <li>Delivered actionable recommendations to the client with strong positive feedback.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-thumb">02</div>
+            <div class="work-body">
+              <h3>North American Stock Screening Model</h3>
+              <p class="work-period">Sep 2024 – Dec 2024</p>
+              <ul>
+                <li>Built a fundamentals-driven model using P/E, ROE, Debt-to-Equity, and Dividend Yield.</li>
+                <li>Produced investor-ready evaluation tables for structured decision-making.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
       <div class="container">
         <h2 class="section-title">Skills</h2>
         <p class="section-subtitle">Technical tools and analytical capabilities developed through coursework and professional experience.</p>
@@ -188,73 +271,29 @@
             </div>
           </article>
           <article class="skill-card">
-            <h3>Business Analytics</h3>
-            <p>
-              KPI design, dashboarding, performance tracking, variance analysis,
-              funnel &amp; cohort analysis, customer segmentation, revenue analysis,
-              marketing analytics, financial reporting, and stakeholder reporting.
-            </p>
-          </article>
-          <article class="skill-card">
             <h3>Actuarial Exams</h3>
             <div class="skill-tags">
               <span class="skill-tag">SOA Exam P — Passed</span>
               <span class="skill-tag">SOA Exam FM — Passed</span>
             </div>
-            <p>
-              Probability (P) and Financial Mathematics (FM), Society of Actuaries.
-            </p>
+            <p>Probability (P) and Financial Mathematics (FM), Society of Actuaries.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Business Analytics</h3>
+            <p>KPI design, dashboarding, variance analysis, customer segmentation, financial reporting, and stakeholder reporting.</p>
           </article>
           <article class="skill-card">
             <h3>Coursework</h3>
-            <p>
-              Financial Mathematics, Actuarial Science Practice, Financial Accounting,
-              Statistics, Microeconomics
-            </p>
+            <p>Financial Mathematics, Actuarial Science Practice, Financial Accounting, Statistics, Microeconomics.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">Selected academic and analytical projects demonstrating research and quantitative skills.</p>
-        <div class="works-grid">
-          <article class="work-card">
-            <div class="work-thumb">01</div>
-            <div class="work-body">
-              <h3>Data-Driven Student Food Security Analysis</h3>
-              <p class="work-period">Apr 2025 – Jul 2025</p>
-              <ul>
-                <li>Analyzed student food security data from Statistics Canada — cost of living, funding sources, employment status — and visualized insights in interactive Power BI dashboards.</li>
-                <li>Produced a structured report identifying root causes and actionable solutions; delivered findings to the client with strong positive feedback.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="work-card">
-            <div class="work-thumb">02</div>
-            <div class="work-body">
-              <h3>North American Stock Screening Model</h3>
-              <p class="work-period">Sep 2024 – Dec 2024</p>
-              <ul>
-                <li>Built a fundamentals-driven screening model using P/E, ROE, Debt-to-Equity, Current Ratio, and Dividend Yield to evaluate public equities.</li>
-                <li>Applied comparative financial analysis to rank investment candidates and produced investor-ready evaluation tables.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
+    <section class="section section-alt" id="contact-panel">
       <div class="container">
         <h2 class="section-title">Contact</h2>
-        <p class="contact-intro">
-          Open to co-op opportunities, collaborations, and conversations about actuarial science,
-          analytics, and data-driven strategy. Feel free to reach out.
-        </p>
+        <p class="contact-intro">Open to co-op opportunities, collaborations, and conversations about actuarial science and analytics.</p>
         <div class="contact-links">
           <a class="contact-card" href="mailto:yuxingood66@gmail.com">
             <span class="contact-icon">✉</span>
