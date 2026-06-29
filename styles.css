@@ -169,6 +169,35 @@ ul {
   gap: 0.5rem;
 }
 
+.lang-toggle {
+  height: 36px;
+  min-width: 64px;
+  padding-inline: 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--navy);
+  font: 600 0.7rem/1 var(--font-sans);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.lang-toggle:hover {
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.lang-divider {
+  margin-inline: 0.15rem;
+  color: var(--line-strong);
+}
+
+.lang-next {
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
 .theme-toggle {
   width: 36px;
   height: 36px;
@@ -1198,6 +1227,23 @@ button.bento-card:hover {
 }
 
 @media (max-width: 480px) {
+  .nav-logo {
+    font-size: 1.15rem;
+  }
+
+  .nav {
+    gap: 0.5rem;
+  }
+
+  .nav-actions {
+    gap: 0.35rem;
+  }
+
+  .lang-toggle {
+    min-width: 58px;
+    padding-inline: 0.55rem;
+  }
+
   .hero-actions {
     flex-direction: column;
   }
